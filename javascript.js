@@ -28,6 +28,7 @@ function createGrid(n)
         function addHoverEffect(squares){
             squares.forEach(square => square.addEventListener('mouseover', ()=>{
                 square.classList.add('permahover');
+                square.style.backgroundColor = getRandomColor();
             }));
         
         }
@@ -81,11 +82,23 @@ console.log(squares);
 
 function addHoverEffect(squares){
     squares.forEach(square => square.addEventListener('mouseover', ()=>{
+
         square.classList.add('permahover');
+        square.style.backgroundColor = getRandomColor();
+
     }));
 
 }
 
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+  
 addHoverEffect(squares);
 
 
