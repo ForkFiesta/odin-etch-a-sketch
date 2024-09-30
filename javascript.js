@@ -13,7 +13,7 @@ function createGrid(n)
                 {
                     const square = document.createElement("div");
                     square.classList.add("square", "highlight");
-                    let newDimension = Math.floor(960/n)+'px';
+                    let newDimension = (960/n)+'px';
                     console.log(newDimension);
                     square.style.height = newDimension;
                     square.style.width = newDimension;
@@ -21,6 +21,20 @@ function createGrid(n)
                     row.appendChild(square);
                 }
         }
+
+        const squares = document.querySelectorAll(".square");
+        console.log(squares);
+        
+        function addHoverEffect(squares){
+            squares.forEach(square => square.addEventListener('mouseover', ()=>{
+                square.classList.add('permahover');
+            }));
+        
+        }
+
+        addHoverEffect(squares);
+
+
 
 }
 
@@ -32,7 +46,7 @@ for (let i = 0; i<16; i++)
         for (let i = 0; i<16; i++)
             {
                 const square = document.createElement("div");
-                square.classList.add("square", "highlight");
+                square.classList.add("square");
                 row.appendChild(square);
             }
     }
@@ -61,6 +75,24 @@ gridButton.addEventListener('click', () =>{
     let gridSize = getGridSize();
     createGrid(gridSize);
 })
+
+const squares = document.querySelectorAll(".square");
+console.log(squares);
+
+function addHoverEffect(squares){
+    squares.forEach(square => square.addEventListener('mouseover', ()=>{
+        square.classList.add('permahover');
+    }));
+
+}
+
+addHoverEffect(squares);
+
+
+// function addColor(element)
+// {
+//     element.classList.add('permhover')
+// }
 
 
 

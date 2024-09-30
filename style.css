@@ -16,27 +16,38 @@
 
 .row {
     display: flex;
+    margin:0px;
+
 }
 
 .square {
     width: 60px;
     height: 60px;
     border: 1px solid black;
+    box-sizing: border-box;
+    /* margin: 0 -1px 0 -1px; */
 
 }
 
-.highlight:hover {
+.highlight {
+    background-color: white;
+    /* transition-timing-function: ease-out; */
+    /* transition: 10s; */
+    /* transition: all 0.2s ease 5s; */
 
+}
+
+.permahover {
+    /* transition: 5s; */
     background-color: aqua;
-
-
+    
 }
 
 .grid-button {
     display: flex;
     align-items: center;
     justify-content: end;
-    margin: 20px 0 60px 0;
+    margin: 20px 0 20px 0;
     /* padding:40px; */
 
 }
@@ -51,12 +62,14 @@
 .grid {
     display: flex;
     flex-direction: column;
-    max-width: 960px;
-    max-height: 960px;
-    justify-content: baseline;
+    width: 960px;
+    height: 960px;
+    justify-content: center;
     align-items: center;
     /* box-sizing: border-box; */
     
 }
+
+
 
 
