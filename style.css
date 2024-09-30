@@ -8,9 +8,11 @@
     display: flex;
     width: 1280px;
     height: 1280px;
-    /* flex-wrap: wrap; */
-    /* align-items: center; */
-    /* justify-content: center; */
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
 }
 
 .square {
